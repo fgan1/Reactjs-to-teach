@@ -1,0 +1,32 @@
+p {
+    margin: auto;
+    width: 50%;      
+    background-color: #eee;
+    text-align: center;
+}
+
+.ModelOne {
+    margin: auto;
+    text-align: center;
+
+    border: 1px solid saddlebrown;
+    padding: 20px;
+}
+
+.ModelOne li {
+    padding: 10px;
+}
+
+.ModelTwo {
+    margin: auto;
+    width: 50%;      
+    text-align: center;
+
+    max-width: 80%;
+    border: 1px solid skyblue;
+    padding: 10px;
+}
+
+.ModelTwo li {
+    padding: 5px;
+}
