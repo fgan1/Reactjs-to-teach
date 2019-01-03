@@ -20,6 +20,10 @@ const asyncAuth = asyncComponent(() => {
   return import('./containers/Auth/Auth');
 });
 
+const asyncConfig = asyncComponent(() => {
+  return import('./containers/Config/Configuration')
+});
+
 class App extends Component {
   componentDidMount () {
     this.props.onTryAutoSignup();
@@ -29,6 +33,7 @@ class App extends Component {
     let routes = (
       <Switch>
         <Route path="/auth" component={asyncAuth} />
+        <Route path="/config" component={asyncConfig} /> {/* OBS: Temporary */}
         <Route path="/" exact component={BurgerBuilder} />
         <Redirect to="/" />
       </Switch>
@@ -37,7 +42,7 @@ class App extends Component {
     if ( this.props.isAuthenticated ) {
       routes = (
         <Switch>
-          <Route path="/checkout" component={asyncCheckout} />
+          <Route path="/checkout" component={asyncCheckout} />          
           <Route path="/orders" component={asyncOrders} />
           <Route path="/logout" component={Logout} />
           <Route path="/auth" component={asyncAuth} />
